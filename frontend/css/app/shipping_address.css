@@ -1,0 +1,198 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: kanit_regular;
+    overflow-x: hidden;
+    background-color: var(--bone);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: oswald_regular;
+    src: url(../../../assets/fonts/Oswald/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: oswald_bold;
+    src: url(../../../assets/fonts/Oswald/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: oswald_light;
+    src: url(../../../assets/fonts/Oswald/Oswald-Light.ttf);
+}
+
+@font-face {
+    font-family: kanit_regular;
+    src: url(../../../assets/fonts/Kanit/Kanit-Regular.ttf);
+}
+@font-face {
+    font-family: kanit_light;
+    src: url(../../../assets/fonts/Kanit/Kanit-Light.ttf);
+}
+
+
+:root {
+    --black: #1b1b1b;
+    --green: #19681e;
+    --red: #791313;
+    --blue: #143b8d;
+    --gray: #4b4b4b;
+    --gray_light: #c4c4c4;
+    --gray_lighter :#dadce2;
+    --bone: #f8f8ff;
+}
+
+
+
+.subtitle {
+    font-family: oswald_bold;
+}
+
+.hide_ele {
+    display: none;
+}
+
+.show_ele {
+    display: block;
+}
+
+.shipping_adddress_wrapper{
+    padding-top: 3rem;
+    gap: 1rem;
+}
+.column{
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+}
+
+.continue_checkout_btn{
+    background-color: var(--green);
+    color: var(--bone);
+    margin: 2rem 80%;
+}
+.continue_checkout_btn:hover{
+    border: 2px solid var(--green);
+    color: var(--green);
+}
+
+
+/* Payment styles */
+
+
+.purchase_steps{
+    margin: 2rem auto 0;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+.purchase_steps a {
+    width: 30%;
+    font-size: 1rem;
+    padding: 0;
+    text-decoration: none;
+    color: var(--black);
+}
+.address_link::after, .payment_link::after{
+    content: "";
+    margin-left:1rem;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2px;
+    width: 60%;
+    background-color: var(--black);
+}
+.address_link.active::after,
+.payment_link.active::after {
+    background-color: rgb(3, 165, 3);
+}
+.address_link.active,
+.payment_link.active {
+    color: rgb(3, 165, 3);
+}
+.method{
+    min-height: 8rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: #f7f7f7;
+    padding: 1rem;
+    border-radius: 12px;
+     box-sizing: border-box;
+
+}
+.method:hover{
+    border: 1px solid var(--blue);
+}
+.method p{
+    margin: 0 1rem;
+
+}
+.payment_img{
+    width: 4rem;
+}
+.payment_col{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.payment_continue_btn{
+    background-color: var(--blue);
+    color: var(--bone);
+    width: max-content;
+    margin: 1rem auto 1rem 70% ;
+}
+.payment_continue_btn:hover{
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+
+/* Confirmation purchase styles */
+
+.confirmation_body{
+    width: 80%;
+    margin: 3rem auto 0;
+    background-color: white;
+    border-radius: 16px;
+}
+.confirmation_body h2{
+    font-family: oswald_bold;
+}
+.confirmation_body h4{
+    font-family: oswald_regular;
+}
+.confirmation_btn{
+    background-color: var(--green);
+    color: var(--bone);
+}
+.confirmation_btn:hover{
+    background-color: transparent;
+    color: var(--green);
+    border: 1px solid var(--green);
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1070px) {
+    .purchase_steps a{
+    font-size: 1rem;
+}
+.addres_link::after, .payment_link::after{
+    width: 60%;
+}
+}

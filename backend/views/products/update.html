@@ -1,0 +1,173 @@
+<div class="card form_container">
+    <div id="update_product_wrapper" class="card-header">
+        <h4>Update Product</h4>      
+
+            <img id="update_product_image" style="max-width: 5rem;" src="" alt="">
+    </div>
+    <div class="card-body">
+        <form id="product_form" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <input type="hidden" class="form-control" name="product_id" id="product_id" aria-describedby="helpId"
+                    placeholder="product id ">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="product_code">Product code:</label>
+                        <input required type="text" class="form-control" name="product_code" id="product_code"
+                            aria-describedby="helpId" placeholder="PDR0012" pattern="^[A-Za-z0-9]{2,20}$"
+                            title="Code: 2-20 chars, letters, numbers" readonly>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="product_stock">Stock:</label>
+                      <input type="text"
+                        class="form-control" name="product_stock" id="product_stock" aria-describedby="helpId" placeholder="Quntity in stock ">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="product_name">Product name: </label>
+                <input required type="text" class="form-control" name="product_name" id="product_name"
+                    aria-describedby="helpId" placeholder="Product name " pattern="^[A-Za-zÀ-ÿ0-9'\- ]{2,50}$"
+                    title="Name: 2-50 chars, letters, numbers, spaces, apostrophes, hyphens">
+            </div>
+            
+            <div class="form-group">
+                <label for="product_description">Product description: </label>
+                <input required type="text" class="form-control" name="product_description" id="product_description"
+                    aria-describedby="helpId" placeholder="Product description " pattern="^[A-Za-zÀ-ÿ0-9.,'%\- ]{5,300}$"
+                    title="Description: 5-300 chars, letters, numbers, spaces, apostrophes, hyphens, commas, periods">
+            </div>
+            <div class="form-group">
+                <label for="product_brand">Bran </label>
+                <input required type="text" class="form-control" name="product_brand" id="product_brand"
+                    aria-describedby="helpId" placeholder="nike, adidas, reebok, etc."
+                    pattern="^[A-Za-zÀ-ÿ0-9'\- ]{2,30}$"
+                    title="Brand: 2-30 chars, letters, numbers, spaces, apostrophes, hyphens">
+            </div>
+            <div class="mb-3">
+                <label for="product_category" class="form-label">Category</label>
+                <select value="SELEc" class="form-select form-select-md" name="product_category" id="product_category">
+                    <option selected>Select category</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="product_imag" class="form-label">Image: </label>
+
+                <input  type="file" class="form-control" name="product_image" id="product_image"
+                    placeholder="Select image" aria-describedby="fileHelpId">
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="mb-3">
+                        <label for="product_color" class="form-label">Color: </label>
+                        <select class="form-select form-select-md" name="product_color" id="product_color">
+                            <option selected>Select color </option>
+                        </select>
+                    </div>
+
+
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3">
+                        <label for="size_type" class="form-label">Size type: </label>
+                        <select class="form-select form-select-md" name="size_type" id="size_type_select">
+                            <option selected>Select type of size:</option>
+                            <option value="Clothing Sizes">Clothing Sizes</option>
+                            <option value="Shoe Sizes">Shoe Sizes</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3">
+                        <label for="product_size" class="form-label">Clothing size:
+
+                        </label>
+                        <select class="form-select clothing_select form-select-md" name="product_size"
+                            id="clothing_select">
+                            <option selected id="default">Selct size</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3">
+                        <label for="product_size" class="form-label">Shoe size:</label>
+                        <select class="form-select shoes_select form-select-md" name="product_size" id="shoes_select">
+                            <option selected>Select size</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Characteristcs</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="product_type_attribute" class="form-label">Type Attribute: </label>
+                                <select class="form-select form-select-md" name="product_type_attribute"
+                                    id="product_type_attribute">
+                                    <option selected>Select type of atttribute</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="product_subtype_attribute" class="form-label">Sub-type of attribute: <i
+                                        class="bi bi-question-circle"></i>
+                                </label>
+                                <select class="form-select form-select-md" name="product_subtype_attribute"
+                                    id="product_subtype_attribute">
+                                    <option selected>Sub-attribute</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card-header">Price</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="product_price">Original price:</label>
+                                <input required type="number" min="0" step="0.01" class="form-control"
+                                    name="product_price" id="product_price" aria-describedby="helpId"
+                                    placeholder="Price €" title="Price: must be a non-negative number">
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="product_sale_price">Sale price: </label>
+                                <input required type="number" min="0" step="0.01" class="form-control"
+                                    name="product_sale_price" id="product_sale_price" aria-describedby="helpId"
+                                    placeholder="Sale price €" title="Sale price: must be a non-negative number">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="btn_wrapper">
+
+                <button id="update_product_btn" type="submit" data-fetchaction="put" id="update_product_btn"
+                    class="btn green_btn add_form_btn"> Update product </button>
+                <button value="products" name="cancel_btn" id="cancel_product_btn"
+                    class="btn cancel_form_btn red_btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

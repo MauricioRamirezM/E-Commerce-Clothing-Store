@@ -1,0 +1,154 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-2">
+            <img style="width: 150px;"
+            id="profile_img"
+                src="../../../assets/images/dashboard/profile_default_user.png"
+                alt="">
+        </div>
+        <div class="col-md-7">
+                <h3 id="profile_name"></h3> 
+                <div class="row email_phone_row ">
+                    <a class="h5" id="profile_email" href="mailto:"></a> || <h5 >Phone: <span id="profile_phone" ></span></h5>
+                    
+                </div>
+            <p>Client No. : <span id="profile_user_number"></span></p>
+             
+        </div>
+        <div class="col-md-3">
+            <h6 > Profile Created: <span id="profile_creation"></span></h6>
+              <h6>Birthday: <span id="profile_birthday">12/78/7894</span></h6>
+            <h6>Missing points:  <span id="missin_ponits_span">100</span></h6>
+        </div>
+    </div>
+    <div class="row card_wrapper">
+        <div class="card border-0 border-bottom">
+            <div class="card-body">
+                <h5 class="card-title mb-3">Addresses</h5>
+                <div class="table-responsive-lg">
+                    <table class="table    align-middle">
+                        <thead class="table">
+                            <tr>
+                                <th>Address ID</th>
+                                <th>Ext. number</th>
+                                <th>Int. number</th>
+                                <th> City</th>
+                                <th>State</th>
+                                <th>Street</th>
+                                <th>CP</th>
+                                <th>Country</th>
+                                <th>Is default</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider" id="profile_address_table">
+                            <!-- <tr>
+                                <td>001</td>
+                                <td>23</td>
+                                <td>2A</td>
+                                <td>lisbon</td>
+                                <td>Lisbon</td>
+                                <td>Av. cuarebtaycico</td>
+                                <td>1233-987</td>
+                                <td>Portugal</td>
+                                <td>Yes</td>
+                            </tr> -->
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="row card_wrapper">
+        <div class="card border-0 border-bottom">
+            <div class="card-body">
+                <h5 class="card-title mb-3">Orders</h5>
+                <div class="table-responsive-lg">
+                    <table class="table    align-middle">
+                        <thead class="table">
+                            <tr>
+                                <th># Order</th>
+                                <th>Status</th>
+                                <th>Paymeth method</th>
+                                <th>Address</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Options</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="profile_orders_table" class="table-group-divider ">
+                            <!-- <tr class="">
+                                <td>4002</td>
+                                <td>Confirmed</td>
+                                <td>Master card</td>
+                                <td>Av. dos Aliados 21 Int 3, Porto, Porto, 1900-123, Portugal</td>
+                                <td>23/12/2202</td>
+                                <td>176 €</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary blue_btn">
+                                        Details
+                                    </button>
+
+                                </td>
+                            </tr> -->
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row product_details_section ">
+        <section id="product_details_section" class="product_details_section hide_ele">
+            <div class="card card_wrapper">
+                <div class="card-header">Order details: </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table ">
+                            <thead class="">
+                                <tr>
+                                    <th>Details</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody id="prduct_details_table" class="table-group-divider prduct_details_table">
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer p-0 text-end ">
+                    <h5 class="me-5">Total Order: <span id="total_order" class="ms-5">1222€</span></h5>
+
+                </div>
+            </div>
+
+            <div class="card card_wrapper">
+                <div class="card-body address_card_body">
+                    <h5 class="card-title">Address Shipping</h5>
+                    <div id="shipping_address" class="card-text">
+                        <span id="shipping_name" class="fw-bold"></span><br>
+                        <span id="shippnig_street_num"></span><br>
+                        <span id="shipping_city_state_cp"></span><br>
+                        <span id="shipping_country"></span><br>
+                        <span id="shipping_phone"></span>
+                    </div>
+                    <div id="shipping_method" class="card-footer">
+                        <p>Payment Method: <span id="method_span" class="ms-5 fw-blod"></span></p>
+
+                    </div>
+                </div>
+            </div>
+</div>
+</div>

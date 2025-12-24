@@ -1,0 +1,84 @@
+<div class="card">
+    <div class="card-header">
+        Our Promotios
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Discount %</th>
+                    <th>Start date</th>
+                    <th>End date</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody id="promo_table">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="card-header">
+        <h4>Update Promotion</h4>
+    </div>
+    <div class="card-body">
+        <form action="" method="post">
+            <div class="form-group">
+                <input type="hidden" class="form-control" name="promo_id" id="promo_id" aria-describedby="helpId"
+                    placeholder="id">
+            </div>
+            <div class="form-group">
+                <label for="promo_name">Promo Name: </label>
+                <input required type="text" class="form-control" name="promo_name" id="promo_name" aria-describedby="helpId"
+                    placeholder="Promo name" pattern="^[A-Za-zÀ-ÿ0-9'\- ]{2,50}$" title="Name: 2-50 chars, letters, numbers, spaces, apostrophes, hyphens">
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="promo_porcent">Porcent %</label>
+                        <input required type="number" min="1" max="100" step="1" class="form-control" name="promo_porcent" id="promo_porcent"
+                            aria-describedby="helpId" placeholder="insert percent (20%)" title="Percent: 1-100">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="promo_start_date">Start date: </label>
+                        <input required type="date" class="form-control" name="promo_start_date" id="promo_start_date"
+                            aria-describedby="helpId" placeholder="select start date ">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="promo_end_date">End date: </label>
+                        <input required type="date" class="form-control" name="promo_end_date" id="promo_end_date"
+                            aria-describedby="helpId" placeholder="Select end date">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="promo_description" class="form-label">Promo description: </label>
+                <textarea required class="form-control" name="promo_description" id="promo_description"
+                    rows="3" minlength="5" maxlength="200" placeholder="Insert a description..." title="Description: 5-200 characters"></textarea>
+            </div>
+
+            <div class="btn_wrapper">
+                <button type="submit" data-fetchaction="post" id="add_promo_id" class="btn add_form_btn green_btn">Add Promotion</button>
+                <button type="submit" data-fetchaction="put" id="update_promo_btn" class="btn add_form_btn hide green_btn">Update Promotion</button>
+                <button id="cancel_promo_btn" type="button" class="btn red_btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer text-muted">
+
+    </div>
+</div>

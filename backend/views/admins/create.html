@@ -1,0 +1,56 @@
+
+  <div class="card  form_container">
+    <div class="card-header">
+      <h4>Create Admin</h4>
+    </div>
+    <div class="card-body">
+      <form id="admin_form" >
+        <div class="form-group">
+          <input  type="hidden" class="form-control" name="admin_id" id="admin_id" aria-describedby="helpId"
+            placeholder="id ">
+        </div>
+        <div class="form-group">
+          <label for="first_name_admin">First name:</label>
+          <input required type="text" class="form-control" name="first_name_admin" id="first_name_admin"
+            aria-describedby="helpId" placeholder="First name "
+            pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,30}$" title="First name: only letters, spaces, apostrophes, and hyphens (2-30 chars)">
+        </div>
+        <div class="form-group">
+          <label for="last_name_admin">Last name:</label>
+          <input required type="text" class="form-control" name="last_name_admin" id="last_name_admin" aria-describedby="helpId"
+            placeholder="Last name "
+             pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,30}$" title="Last name: only letters, spaces, apostrophes, and hyphens (2-30 chars)">
+
+        </div>
+        <div class="form-group">
+          <label for="email_admin">Email:</label>
+          <input required type="email" class="form-control" name="email_admin" id="email_admin" aria-describedby="helpId"
+            placeholder="Example@mail.com "
+            pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$" title="Enter a valid email address">
+
+        </div>
+        <div class="form-group">
+          <label for="phone_admin">Phone number:</label>
+          <input required type="text" class="form-control" name="phone_admin" id="phone_admin" aria-describedby="helpId"
+            placeholder=" 444 555 888"
+            pattern="^[0-9\s\-\+\(\)]{7,20}$" title="Phone: 7-20 digits, may include + and spaces">
+        </div>
+        <div class="form-group">
+          <label for="password_admin">Password:</label>
+          <input required type="password" class="form-control" name="password_admin" id="password_admin"
+            aria-describedby="helpId" placeholder="*************"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"  title="Password: at least 8 characters, 1 letter, 1 number">
+        </div>
+
+
+        <div class="btn_wrapper" id="btn_wrapper">
+          <button type="submit" class="btn add_form_btn green_btn">Add admin</button>
+          <button value="admins" type="button" name="cancel_client_btn" id="cancel_admin_btn"
+            class="btn cancel_form_btn red_btn" class="btn btn-primary">Cancel</button>
+        </div>
+
+      </form>
+    </div>
+    <div class="card-footer text-muted">
+    </div>
+  </div>

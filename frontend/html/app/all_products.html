@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Missing Brand®</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Missing Brand® - Browse all products and find your style.">
+    <meta name="keywords" content="products, fashion, shop, e-commerce, Missing Brand">
+    <meta name="author" content="Missing Brand">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Missing Brand® All Products">
+    <meta property="og:description" content="Browse all products and find your style at Missing Brand®.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../../css/app/all_products.css">
+    <link rel="stylesheet" href="../../css/app/index.css">
+</head>
+
+<body>
+    <header>
+        <div class=" header_container justify-content-cente">
+            <button class="btn hamburguer_btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#burguer_menu"
+                aria-controls="offcanvasRight"><i class="bi bi-list burguer_menu_btn"></i></button>
+
+
+            <a id="logo_link_wraper" href="../../../index.html" class="navbar-brand logo_img"> <img class="logo_img"
+                    src="../.../../../../assets/images/dashboard/logo.avif" alt="missing brand registered"></a>
+            <form class="search_bar" role="search" id="search_bar">
+                <input class="form-control me-2 form-control-sm" type="search" placeholder="Search"
+                    aria-label="Search" />
+                <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+            </form>
+
+
+            <div class=" header_actions">
+
+                <div class="btn-group action_btn_wrapper" role="group" aria-label="Basic example">
+                    <button type="button" class="btn search_btn search_header_btn"><i
+                                class="bi bi-search search_header_btn"></i></button>
+                    <div class="dropdown">
+                        <button class="btn" type="button" id="profileDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-person"></i>
+                        </button>
+                        <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-end profile_list"
+                            aria-labelledby="profileDropdown" style="min-width: 280px;">
+                            <li id="profile_header" class="dropdown-header">Your Profile</li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="dropdown">
+                        <button class="btn" type="button" id="cartDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-cart2"></i>
+                        </button>
+                        <ul id="cart_dropdown_list" class="dropdown-menu dropdown-menu-end cart_list"
+                            aria-labelledby="cartDropdown" style="min-width: 280px;">
+                            <li class="dropdown-header">Your Cart</li>
+                            <li id="total_cart_li">
+                                <div class=" total_wrapper">
+                                    <div class="total_text">
+                                        <p class="subtotal_cart">Subtotal: </p>
+                                        <p class="total_cart"> Total: </p>
+                                    </div>
+                                    <div class="total_numbers">
+                                        <p id="subtotal_cart" class="subtotal_cart"></p>
+                                        <p id="total_cart" class="total_cart"> </p>
+                                    </div>
+                                </div>
+                                <a name="" id="checkout_cart_btn" class="btn checkout_cart_btn "
+                                    href="./cart_dashboard.html" role="button">Go to check out</a>
+                            </li>
+
+
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+    <main>
+        <div class="container products_container">
+            <div id="serach_bar2" class="container-fluid search_bar_wrapper  ">
+                <form class="d-flex" role="search" class="search_bar2 " id="search_bar3">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="row filter_btn_wrapper">
+
+                <button class="btn icon_filter_btn" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#filter_modal" aria-controls="offcanvasRight">Filter <i
+                        class="bi bi-funnel"></i></button>
+
+                <div class="offcanvas filter_modal offcanvas-end" tabindex="-1" id="filter_modal"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title title " id="offcanvasRightLabel"> FiIters</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <form class="vertical_form_filter filter_form" id="vertical_form_filter">
+                            <label for="color_select_modal">Color:</label>
+                            <select class="form-select form-select-sm" id="color_select_modal" name="color"
+                                aria-label="Small select example">
+                                <option value="">Select a color</option>
+                            </select>
+                            <label for="size_select_modal">Size:</label>
+                            <select class="form-select form-select-sm" id="size_select_modal" name="size"
+                                aria-label="Small select example">
+                                <option value="">Select a size</option>
+                            </select>
+                            <label for="material_select_modal">Material: </label>
+                            <select class="form-select form-select-sm" id="material_select_modal" name="material"
+                                aria-label="Small select example">
+                                <option value="">Select a material</option>
+                            </select>
+                            <label for="style_select_modal">Style: </label>
+                            <select class="form-select form-select-sm" id="style_select_modal" name="style"
+                                aria-label="Small select example">
+                                <option value="">Select an style</option>
+                            </select>
+                            <label for="brand_select_modal">Brand: </label>
+                            <select class="form-select form-select-sm" id="brand_select_modal" name="brand"
+                                aria-label="Small select example">
+                                <option value="">Select a Brand</option>
+                            </select>
+
+                            <button type="submit" class="btn filter_btn btn-primary">
+                                Appy filters
+                            </button>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row filter_wrapper justify-content-center ">
+                <form id="filters_form" class="filters filter_form">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="color_select">Color: </label>
+                            <select class="form-control-sm form-control" name="color" id="color_select"
+                                placeholder=".form-control-sm">
+                                <option value=""> Select a color</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="brand_select">Brand: </label>
+                            <select class="form-control-sm form-control" name="brand" id="brand_select"
+                                placeholder=".form-control-sm">
+                                <option value=""> Select a brand</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="style_select">Style: </label>
+                            <select class="form-control-sm form-control" name="style" id="style_select"
+                                placeholder=".form-control-sm">
+                                <option value=""> Select a style</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="material_select">Material: </label>
+                            <select class="form-control-sm form-control" name="material" id="material_select"
+                                placeholder=".form-control-sm">
+                                <option value=""> Select a material</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="size_select">Size: </label>
+                            <select class="form-control-sm form-control" name="size" id="size_select"
+                                placeholder=".form-control-sm">
+                                <option value=""> Select a size</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col_btn ">
+                        <button type="submit" class=" filter_btn btn btn-primary">Filter</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div id="category_btn_wrapper" class="row category_btn_wrapper">
+                <!-- Buttons added dinamically -->
+            </div>
+
+            <div id="all_products_section" class="row products_wrapper">
+                <div id="card_template" class="card">
+                    <img src="../../../assets/images/product/aviator _sunglasses.webp" class="card-img-top card_image"
+                        alt="...">
+                    <div id="card_product_body" class="card-body">
+                        <div class="row">
+                            <div class="col-sm-7 p-0">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                            </div>
+                            <div class="col-sm-5 p-0">
+                                <a href="./single_product.html?product_id=" disabled data-product_id=""
+                                    class="btn product_link btn-primary">out stock</a>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="burguer_menu" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title title" id="offcanvasRightLabel">MENU</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a name="admin_link_btn" id="admin_link_btn" class=" btn menu_category_btn fw-bold fs-5"
+                    href="../../admin/html/index.html" role="button">
+                    Admin site <i class="bi bi-tools text-body-success"></i>
+                </a>
+                <div class="row gender_btn_wrapper">
+
+                </div>
+                <div class="container-fluid">
+                    <h6 class="mt-4 menu_title">Products</h6>
+                    <ul id="menu_list_categories" class="list-group list-group-numbered menu_list">
+                        <a name="" class=" btn menu_category_btn" href="./all_products.html"> All products</a>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-3">
+                    <h5 class="">Follow Us!</h5>
+                    <p class="social_media"> <i class="bi bi-facebook"></i> <i class="bi bi-youtube"></i>
+                        <i class="bi bi-twitter-x"></i> <i class="bi bi-instagram"></i>
+                        <i class="bi bi-threads"></i>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="">Payment methods:</h5>
+                    <div class="row payment_wrapper ">
+                        <div class="col-sm-3">
+                            <img src="../../../assets/images/dashboard/payments/mastercard.png" alt="mastercard logo">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="../../../assets/images/dashboard/payments/visa.png" alt="visalogo">
+
+                        </div>
+
+                        <div class="col-sm-3">
+
+                            <img src="../../../assets/images/dashboard/payments/mbway.png" alt="mbWay logo">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="../../../assets/images/dashboard/payments/paypal.png" alt="PayPal logo">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mt-3">Help</h5>
+                    <ul class="list-group list-group-numbered footer_list">
+                        <li>Frequently asked questions</li>
+                        <li>Processing a return</li>
+                        <li>Store services</li>
+                        <li>About us</li>
+                    </ul>
+
+                </div>
+                <div class="col-md-1">
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script type="module" src="../../js/app/alert.js"></script>
+    <script type="module" src="../../js/app/authentication.js"></script>
+    <script type="module" src="../../js/app/functionality.js"></script>
+    <script type="module" src="../../js/app/products.js"></script>
+    <script type="module" src="../../js/app/shopping_Cart.js"></script>
+</body>
+
+</html>

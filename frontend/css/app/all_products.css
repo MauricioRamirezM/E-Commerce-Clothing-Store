@@ -1,0 +1,214 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: kanit_regular;
+    overflow-x: hidden;
+    background-color: var(--bone);
+    color: var(--black);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: oswald_regular;
+    src: url(../../../assets/fonts/Oswald/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: oswald_bold;
+    src: url(../../../assets/fonts/Oswald/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: oswald_light;
+    src: url(../../../assets/fonts/Oswald/Oswald-Light.ttf);
+}
+
+@font-face {
+    font-family: kanit_regular;
+    src: url(../../../assets/fonts/Kanit/Kanit-Regular.ttf);
+}
+@font-face {
+    font-family: kanit_light;
+    src: url(../../../assets/fonts/Kanit/Kanit-Light.ttf);
+}
+
+
+:root {
+    --black: #1b1b1b;
+    --green: #19681e;
+    --red: #791313;
+    --blue: #143b8d;
+    --gray: #4b4b4b;
+    --gray_light: #c4c4c4;
+    --gray_lighter :#dadce2;
+    --bone: #f8f8ff;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.title{
+    font-family: oswald_bold;
+    font-size: 3rem;
+}
+.subtitle {
+    font-family: oswald_light;
+}
+
+.hide_ele {
+    display: none;
+}
+
+.show_ele {
+    display: block;
+}
+
+
+.products_container {
+    padding: 4rem 1rem;
+}
+.filter_btn_wrapper{
+    margin: 1rem auto;
+    display: flex;
+    justify-content: end;
+}
+.icon_filter_btn{
+    width: 20%;
+    padding: .1rem;
+    font-size: 1.2rem;
+    font-family:kanit_light ;
+    color: var(--black);
+    border-radius: 12px;
+    border: 1px solid var(--black);
+
+}
+
+
+ .filter_wrapper{
+        display: none;
+}
+
+
+
+.col_btn {
+    display: grid;
+    place-content: center;
+}
+
+.products_wrapper {
+    min-height: 60vh;
+    gap: 2rem;
+    padding-left: 2rem;
+}
+
+.products_wrapper .card {
+    width: 10rem;
+
+}
+#card_product_body {
+    align-content: end;
+}
+#card_product_body .row {
+    padding-top: 1rem;
+        border-top: 1px solid var(--gray);
+
+}
+.product_link{
+    border: 0;
+    background-color: var(--blue);
+    color: var(--bone);
+
+}
+
+.out_stock{
+    background-color: var(--gray_light);
+    color: var(--red)       
+}
+.product_link:hover{
+    border: 1px solid var(--blue);
+    background-color: var(--bone);
+    color: var(--blue);
+
+}
+
+
+.category_btn_wrapper button{
+    width: 15%;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+    background-color: var(--black);
+    color: var(--gray_lighter);
+    display: inline-block;
+    white-space: nowrap;
+
+}
+.category_btn_wrapper button:hover{
+    border: 1px solid var(--black);
+
+}
+.category_btn_wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem auto;
+      overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 0.5rem; 
+    padding-bottom: 0.5rem;
+}
+.category_btn_wrapper::-webkit-scrollbar {
+    height: 4px;           
+    background: var(--bone);   
+}
+
+.category_btn_wrapper::-webkit-scrollbar-thumb {
+    background: var(--gray_light);    
+    border-radius: 4px;    
+}
+
+.category_btn_wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--gray);    
+}
+.vertical_form_filter{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+}
+.vertical_form_filter select{
+    margin: 0 auto 2rem;
+}
+
+.vertical_form_filter button{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--green);
+}
+@media (min-width: 1400px) {
+    .products_wrapper .card {
+        width: 18rem;
+    }
+    .icon_filter_btn, .filter_btn_wrapper{
+        display: none;
+    }
+    .filter_wrapper {
+        border-bottom: 2px solid var(--black);
+        padding: .5rem;
+    width: 100%;
+    display: flex;
+}
+.filter_wrapper form{
+    display: flex;
+    gap: 1rem;
+}
+
+}

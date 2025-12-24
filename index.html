@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Misisng Brand®</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Missing Brand® - The best fashion e-commerce for your own style.">
+    <meta name="keywords" content="fashion, e-commerce, clothing, style, shop, online store">
+    <meta name="author" content="Missing Brand">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Missing Brand®">
+    <meta property="og:description" content="Shop the best fashion online. Make your own style.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./frontend/css/app/index.css">
+
+</head>
+
+<body>
+    <header>
+        <div class=" header_container justify-content-cente">
+            <button class="btn hamburguer_btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#burguer_menu"
+                aria-controls="offcanvasRight"><i class="bi bi-list burguer_menu_btn"></i></button>
+
+            <a id="logo_link_wraper" href="./index.html" class="navbar-brand logo_img"> <img class="logo_img"
+                    src="./assets/images/dashboard/logo.avif" alt="missing brand registered"></a>
+            <form class="search_bar" role="search" id="search_bar">
+                <input class="form-control me-2 form-control-sm" type="search" placeholder="Search"
+                    aria-label="Search" />
+                <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+            </form>
+
+
+            <div class=" header_actions">
+
+
+                <div id="" class="btn-group action_btn_wrapper" role="group" aria-label="Basic example">
+                    <button type="button" class="btn search_btn search_header_btn"><i
+                            class="bi bi-search search_header_btn"></i></button>
+
+                    <div class="dropdown">
+                        <button class="btn" type="button" id="profileDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-person"></i>
+                        </button>
+                        <ul id="profile_dropdown" class="dropdown-menu dropdown-menu-end profile_list"
+                            aria-labelledby="profileDropdown" style="min-width: 280px;">
+                            <li id="profile_header" class="dropdown-header">Your Profile</li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="dropdown">
+                        <button class="btn" type="button" id="cartDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-cart2"></i>
+                        </button>
+                        <ul id="cart_dropdown_list" class="dropdown-menu dropdown-menu-end cart_list"
+                            aria-labelledby="cartDropdown" style="min-width: 280px;">
+                            <li class="dropdown-header">Your Cart</li>
+                            <li id="total_cart_li">
+                                <div class=" total_wrapper">
+                                    <div class="total_text">
+                                        <p class="subtotal_cart">Subtotal: </p>
+                                        <p class="total_cart"> Total: </p>
+                                    </div>
+                                    <div class="total_numbers">
+                                        <p id="subtotal_cart" class="subtotal_cart"></p>
+                                        <p id="total_cart" class="total_cart"> </p>
+                                    </div>
+                                </div>
+                                <a name="" id="checkout_cart_btn" class="btn checkout_cart_btn " href="./login.html"
+                                    role="button">Go to check out</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </header>
+    <main>
+
+        <div class="container-fluid main_container">
+            <div id="serach_bar2" class="container-fluid search_bar_wrapper  ">
+                <form class="d-flex" role="search" class="search_bar2 " id="search_bar3">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+                </form>
+            </div>
+            <div id="index_banner" class="container-fluid man_banner">
+                <div id="banner_wrapper" class="row banner_text">
+                    <!-- <div class="col-lg-12 "> -->
+                    <h1 class="title">THE BEST FASHION</h1>
+                    <h3 class="subtitle">Make your own style.</h3>
+                    <!-- </div> -->
+
+                </div>
+                <div class="row banner_cards">
+                    <a href="./frontend/html/app/all_products.html?category=jeans">
+                        <div class="card category_card">
+                            <img id="jeans_category" src="./assets/images/category/jeans.png"
+                                class="card-img-top" alt="...">
+                        </div>
+                    </a>
+                    <a href="./frontend/html/app/all_products.html?category=t-shirts">
+                        <div class="card category_card">
+                            <img id="tshirts_category" src="./assets/images/category/t-shirts.png"
+                                class="card-img-top" alt="...">
+                        </div>
+                    </a>
+                    <a href="./frontend/html/app/all_products.html?category=shorts">
+                        <div class="card category_card">
+                            <img id="shorts_category" src="./assets/images/category/short_man.png"
+                                class="card-img-top" alt="...">
+                        </div>
+                    </a>
+                    <a href="./frontend/html/app/all_products.html?category=sneakers">
+                        <div class="card category_card">
+                            <img id="shoes_category" src="./assets/images/category/shoes_woman.png"
+                                class="card-img-top" alt="...">
+                        </div>
+                    </a>
+                    <a href="./frontend/html/app/all_products.html?category=caps">
+                        <div class="card category_card">
+                            <img id="accesories_category" src="./assets/images/category/accesories.png"
+                                class="card-img-top" alt="...">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="container-fluid galery_container">
+                <div class="row galery_div_wrapper">
+                    <div class="col-md-1">
+
+                    </div>
+                    <div class="col-md-3">
+                        <img id="photo_model_1" src="./assets/images/dashboard/couple_models.avif"
+                            alt="man strett model">
+
+
+                    </div>
+                    <div class="col-md-4 singin_wrapper">
+                        <img id="photo_model_2" src="./assets/images/dashboard/man_model4.jpg"
+                            alt="man strett model">
+                        <div id="index_login_wrapper" class="container-fluid">
+                            <h3 class="title mt-4">Log in</h3>
+                            <h5 class="subtitle"> To make an order and get the best style!</h5>
+                            <a name="sing_in_btn" id="sing_in_btn" class="btn singin_btn" href="./frontend/html/app/login.html"
+                                role="button">Log in </a>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+                        <img id="photo_model_3" src="./assets/images/dashboard/couple_models3.jpg"
+                            alt="man strett model">
+
+                    </div>
+                    <div class="col-md-1">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="burguer_menu" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title title" id="offcanvasRightLabel">MENU</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a name="admin_link_btn" id="admin_link_btn" class=" btn menu_category_btn fw-bold fs-5"  href="http://localhost/e-commerce/frontend/html/admin/index.html" role="button">Admin site <i class="bi bi-tools text-body-success"></i></a>
+
+                <div class="container-fluid">
+                    <h6 class="mt-4 menu_title">Products</h6>
+                    <ul id="menu_list_categories" class="list-group list-group-numbered menu_list">
+                        <a name="" class=" btn menu_category_btn" href="./frontend/html/app/all_products.html"> All products</a>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-3">
+                    <h4 class="">Follow Us!</h4>
+                    <p class="social_media"> <i class="bi bi-facebook"></i> <i class="bi bi-youtube"></i>
+                        <i class="bi bi-twitter-x"></i> <i class="bi bi-instagram"></i>
+                        <i class="bi bi-threads"></i>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="">Payment methods:</h4>
+                    <div class="row payment_wrapper ">
+                        <div class="col-sm-3">
+                            <img src="./assets/images/dashboard/payments/mastercard.png" alt="mastercard logo">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./assets/images/dashboard/payments/visa.png" alt="visalogo">
+
+                        </div>
+
+                        <div class="col-sm-3">
+
+                            <img src="./assets/images/dashboard/payments/mbway.png" alt="mbWay logo">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./assets/images/dashboard/payments/paypal.png" alt="PayPal logo">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Help</h5>
+                    <ul class="list-group list-group-numbered footer_list">
+                        <li>Frequently asked questions</li>
+                        <li>Processing a return</li>
+                        <li>Store services</li>
+                        <li>About us</li>
+                    </ul>
+
+                </div>
+                <div class="col-md-1">
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./frontend/js/app/alert.js"></script>
+    <script type="module" src="./frontend/js/app/authentication.js"></script>
+    <script type="module" src="./frontend/js/app/functionality.js"></script>
+    <script type="module" src="./frontend/js/app/products.js"></script>
+    <script type="module" src="./frontend/js/app/shopping_Cart.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<section id="sizes_section">
+    <div class="row sizes_wrapper justify-content-center align-items-center g-2">
+        <div class="col-md-6">
+            <h4 class="subtitle">Clothing & accesories sizes:</h4>
+            <span id="clothing_span_sizes"></span>
+        </div>
+        <div class="col-md-6">
+            <h4 class="subtitle">Footwear sizes:</h4>
+            <span id="shoes_span_sizes"></span>
+        </div>
+    </div>
+</section>
+
+<section id="brands_section" class="char_section">
+     <div id="brands_wrapper" class="row brands_wrapper">
+        <h4>Brands:</h4>
+        <div class="col-md-9">
+            <div class="table-responsive char_table_conte bold_border">
+                <table class="table ">
+                    <thead>
+                        <tr>
+                            <th scope="col">Brand_id</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col" id="td_description_body">Description</th>
+                            <th scope="col">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody id="brand_table">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    Add Brand
+                </div>
+                <div class="card-body">
+                    <form name="char_form"  id="create_brand_form">
+                        <div class="form-group">
+                          <input type="hidden"
+                            class="form-control" name="brand_id" id="brand_id" aria-describedby="helpId" placeholder="id">
+                        </div>
+                        <div class="form-group">
+                            <label for="brand_name">Brand: </label>
+                            <input required type="text" class="form-control" name="brand_name" id="brand_name"
+                                aria-describedby="helpId" placeholder="Brand name "
+                                pattern="^[A-Za-zÀ-ÿ'\- ]{2,30}$" title="Brand: only letters, spaces, apostrophes, and hyphens (2-30 chars)">
+                        </div>
+                        <div class="form-group">
+                          <label for="brand_description">Description: </label>
+                          <textarea required class="form-control" name="brand_description" id="brand_description" placeholder="Enter a description..." rows="3"
+                            pattern="^[A-Za-zÀ-ÿ0-9.,'\- ]{5,200}$" title="Description: 5-200 chars, letters, numbers, spaces, apostrophes, hyphens, commas, periods"></textarea>
+                        </div>
+                        <div class="btn_wrapper">
+                            <button type="submit" data-fetchaction="post" id="add_brand_id" class="btn add_form_btn green_btn">Add brand</button>
+                            <button type="submit" data-fetchaction="put"    id="update_brand_btn" class="btn add_form_btn hide green_btn">Update brand</button>
+                            <button type="button" id="cancel_brand_btn" value="characteristics"  class="btn cancel_form_btn red_btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="colors_section" class="colors char_section">
+    <div id="colors_wrapper" class="row colors_wrapper">
+        <h4>Colors:</h4>
+        <div class="col-md-9">
+            <div class="table-responsive char_table_conte bold_border">
+                <table class="table ">
+                    <thead>
+                        <tr>
+                            <th scope="col">Color_id</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody id="color_table">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    Add color
+                </div>
+                <div class="card-body">
+                    <form name="char_form"  id="create_color_form">
+                        <div class="form-group">
+                          <input type="hidden"
+                            class="form-control" name="color_id" id="color_id" aria-describedby="helpId" placeholder="id">
+                        </div>
+                        <div class="form-group">
+                            <label for="color_name">Color: </label>
+                            <input required type="text" class="form-control" name="color_name" id="color_name"
+                                aria-describedby="helpId" placeholder="color name "
+                                pattern="^[A-Za-zÀ-ÿ'\- ]{2,30}$" title="Color: only letters, spaces, apostrophes, and hyphens (2-30 chars)">
+                        </div>
+                        <div class="btn_wrapper">
+                            <button type="submit" data-fetchaction="post"  id="add_color_id" class="btn add_form_btn green_btn">Add Color</button>
+                            <button type="button" id="cancel_color_btn" value="characteristics"  class="btn cancel_form_btn red_btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="attributes_section " class="char_section ">
+    <div id="attributes_wrapper" class="row attributes_wrapper">
+        <h4>Attributes:</h4>
+        <div class="col-md-9">
+            <div class="table-responsive char_table_conte bold_border">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attribute_table">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">Add Atttibute</div>
+                <div class="card-body">
+                    <form name="char_form"  id="create_attr_form" >
+                        <div class="form-group">
+                          <input type="hidden"
+                            class="form-control" name="attribute_id" id="attribute_id" aria-describedby="helpId" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="attribute_name">Name: </label>
+                            <input required type="text" class="form-control" name="attribute_name" id="attribute_name"
+                                aria-describedby="helpId" placeholder="Attribute name"
+                                pattern="^[A-Za-zÀ-ÿ'\- ]{2,30}$" title="Attribute: only letters, spaces, apostrophes, and hyphens (2-30 chars)">
+                        </div>
+                       <div class="btn_wrapper">
+                            <button type="submit" data-fetchaction="post"   id="add_attr_id" class="btn add_form_btn green_btn">Add Attr</button>
+                            <button type="button" id="cancel_attr_btn" value="characteristics"  class="btn cancel_form_btn red_btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div id="sub-attributes_wrapper" class="row sub-attributes_wrapper char_section">
+        <h4>Sub-attributes:</h4>
+        <div class="col-md-9">
+            <div class="table-responsive char_table_conte bold_border">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sub-attribute_id </th>
+                            <th scope="col">Sub-attribute name </th>
+                            <th scope="col">Attribute name</th>
+                            <th scope="col">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody id="subAttribute_table">
+                      
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    Add Sub-attribute
+                </div>
+                <div class="card-body">
+                    <form name="char_form"  id="create_subAttr_form">
+                        <div class="form-group">
+                          <input type="hidden"
+                            class="form-control" name="subAttr_id" id="subAttr_id" aria-describedby="helpId" placeholder="id">
+                        </div>
+                        <div class="form-group">
+                            <label for="sub-attribute_name">Sub-attribute name: </label>
+                            <input required type="text" class="form-control" name="subAttr_name" id="subAttr_name"
+                                aria-describedby="helpId" placeholder="subAttr_name"
+                                pattern="^[A-Za-zÀ-ÿ'\- ]{2,30}$" title="Sub-attribute: only letters, spaces, apostrophes, and hyphens (2-30 chars)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="attribute_name" class="form-label">Attibute:</label>
+                            <select required id="subAttr_select"  class="form-select form-select-sm" name="attr_name" >
+                                <option value="" selected>Select an attribute</option>
+                            </select>
+                        </div>
+
+                       <div class="btn_wrapper">
+                            <button type="submit" data-fetchaction="post"   id="add_subAttr_id" class="btn add_form_btn green_btn">Add Sub-attr</button>
+                            <button type="submit" data-fetchaction="put"   id="update_subAttr_btn" class="btn add_form_btn hide green_btn">Update Sub-attr</button>
+                            <button type="button" id="cancel_subAttr_btn" value="characteristics" class="btn cancel_form_btn red_btnr">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>

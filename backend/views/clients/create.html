@@ -1,0 +1,56 @@
+<div class="card form_container">
+  
+  <div class="card-header">
+    <h4>Create a new Client.</h4>
+  </div>
+  <div class="card-body">
+    <form id="client_form" action="">
+      <div class="row">
+        <div class="form-group">
+                <input type="hidden" class="form-control" name="client_id" id="client_id" aria-describedby="helpId"
+                    placeholder="id ">
+            </div>
+        <div class="form-group">
+          <label for="first_name_client">First name:</label>
+          <input required type="text" class="form-control" name="first_name_client" id="first_name_client" aria-describedby="helpId"
+            placeholder="First name " pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,30}$" title="First name: only letters and spaces (2-30 chars)">
+        </div>
+        <div class="form-group">
+          <label for="last_name_client">Last name:</label>
+          <input required type="text" class="form-control" name="last_name_client" id="last_name_client" aria-describedby="helpId"
+            placeholder="Last name " pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,30}$" title="Last name: only letters and spaces (2-30 chars)">
+
+        </div>
+        <div class="form-group">
+          <label for="">Email:</label>
+          <input required type="email" class="form-control" name="email_client" id="email_client" aria-describedby="helpId"
+            placeholder="Example@mail.com " pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$" title="Email: must be a valid email address">
+
+        </div>
+         <div class="mb-3">
+        <label for="birthday_client" class="form-label">Birthday date:</label>
+        <input type="date" class="form-control" name="birthday_client" id="birthday_client" aria-describedby="helpId" placeholder="DD-MM-YYY" />
+      </div>
+        <div class="form-group">
+          <label for="phone_client">Phone number:</label>
+          <input required type="text" class="form-control" name="phone_client" id="phone_client" aria-describedby="helpId"
+            placeholder="444 555 888" pattern="^[0-9\s\-\+\(\)]{7,20}$" title="Phone: 7-20 digits, spaces, dashes, parentheses or plus">
+        </div>
+        <div class="form-group">
+          <label for="password_client">Password:</label>
+          <input required type="password" class="form-control" name="password_client" id="password_client" aria-describedby="helpId"
+            placeholder="*************" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$" title="Password: at least 8 characters, 1 letter, 1 number">
+        </div>
+
+
+      </div>
+      <div class="btn_wrapper" id="btn_wrapper">
+        <button type="submit" data-fetchaction="post" class="btn update_btn add_form_btngreen_btn">Add Client</button>
+        <button value="clients" type="button" name="cancel_btn" id="cancel_client_btn" class="btn cancel_form_btn red_btn"
+          class="btn btn-primary">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer text-muted">
+  </div>
+</div>

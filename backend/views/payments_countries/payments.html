@@ -1,0 +1,83 @@
+<div id="payments_wrapper" class="row payments_wrapper ">
+    <h4>Payment methods:</h4>
+    <div class="col-md-8">
+        <div class="table-responsive-sm bold_border">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Payment type</th>
+                        <th scope="col">Options</th>
+                    </tr>
+                </thead>
+                <tbody id="payment_table">
+                
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Add Payment type 
+            </div>
+            <div class="card-body">
+                <form name="pay_country_form" id="create_payment_form">
+                    <div class="form-group">
+                      <label for="payment_name">Name</label>
+                      <input required type="text"
+                        class="form-control" name="payment_name" id="payment_name" aria-describedby="helpId" placeholder="visa, mastercard, paypal, etc..."
+                        pattern="^[A-Za-zÀ-ÿ0-9'\- ]{2,30}$" title="Name: 2-30 chars, letters, numbers, spaces, apostrophes, hyphens">
+                    </div>
+                    <div class="btn_wrapper">
+                        <button type="submit" data-fetchAction="post" class="btn btn-success">Add type</button>     
+                        <button type="button" value="cancel_pay_btn" id="cancel_pay_btn" class="btn btn-danger">Cancel</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row countries_wrapper char_section">
+    <h4>Countries:</h4>
+    <div class="col-md-8">
+        <div class="table-responsive-sm bold_border country_list_body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Coutry</th>
+                        <th scope="col">Options</th>
+                    </tr>
+                </thead>
+                <tbody id="country_table">
+                    
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Add Country 
+            </div>
+            <div class="card-body">
+                <form name="pay_country_form" id="create_country_form">
+                    <div class="form-group">
+                      <label for="country_name">Name</label>
+                      <input required type="text"
+                        class="form-control" name="country_name" id="country_name" aria-describedby="helpId" placeholder="Country name"
+                        pattern="^[A-Za-zÀ-ÿ'\- ]{2,30}$" title="Name: 2-30 chars, letters, spaces, apostrophes, hyphens">
+                    </div>
+                    <div class="btn_wrapper">
+                        <button type="submit" class="btn add_form_btn green_btn">Add coutry</button>     
+                        <button type="button" value="cancel_contry_btn" id="cancel_country_btn" class="btn red_btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

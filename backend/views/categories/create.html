@@ -1,0 +1,75 @@
+<div class="card form_container">
+    <div class="card-header">
+        Categories
+    </div>
+    <div class="card-body">
+        <form id="category_form" enctype="multipart/form-data"  method="post">
+            <div class="form-group">
+              <input required type="hidden"
+                class="form-control" name="category_id" id="category_id" aria-describedby="helpId" placeholder="id ">
+            </div>
+            <div class="form-group">
+                <label for="category_name">Name: </label>
+                <input required type="text" class="form-control" name="category_name" id="category_name"
+                    aria-describedby="helpId" placeholder="Category name "
+                    pattern="^[A-Za-zÀ-ÿ'\- ]{2,30}$" title="Name: only letters, spaces, apostrophes, and hyphens (2-30 chars)">
+            </div>
+            <div class="form-group">
+                <label for="category_description">Description: </label>
+                <input required type="text" class="form-control" name="category_description" id="category_description"
+                    aria-describedby="helpId" placeholder="Category description "
+                    pattern="^[A-Za-zÀ-ÿ0-9.,'\- ]{5,100}$" title="Description: 5-100 chars, letters, numbers, spaces, apostrophes, hyphens, commas, periods">
+            </div>
+            <div class="mb-3">
+                <label for="category_image" class="form-label">Select an image: </label>
+                <input required type="file" class="form-control" name="category_image" id="category_image" placeholder=""
+                    aria-describedby="fileHelpId" />
+            </div>
+
+              <div class="row">
+                <div class="col-sm-1">
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="category_size" class="form-label">Size category: </label>
+                        <select required class="form-select form-select-md" name="category_size" id="category_size">
+                            <option value="" selected>Select a size category </option>
+                            <option value="1">Clothing</option>
+                            <option value="2">Footwear</option>
+                        </select>
+                    </div>
+
+                </div>
+                 <div class="col-sm-2">
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="category_parent" class="form-label">Type of category: </label>
+                        <select required class="form-select form-select-md" name="category_parent" id="category_parent">
+                            <option value="" selected>Select one</option>
+                            <option value="1">Clothing</option>
+                            <option value="2">Accessories</option>
+                            <option value="3">Footwear</option>
+                        </select>
+                    </div>
+
+                </div>
+                 <div class="col-sm-1">
+                    
+                </div>
+            </div>
+
+              <div class="btn_wrapper" id="btn_wrapper">
+                <button type="submit"  data-fetchaction="post" class="btn add_form_btn green_btn">Add category</button>
+                <button value="categories" name="cancel_btn" id="cancel_catego_btn" class="btn cancel_form_btn red_btn" >Cancel</button>
+            </div>
+            
+        </form>
+
+    </div>
+    <div class="card-footer text-muted">
+
+    </div>
+</div>
